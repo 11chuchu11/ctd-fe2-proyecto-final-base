@@ -1,4 +1,4 @@
-import styled, { css } from "styled-components";
+import styled, { css } from 'styled-components'
 
 export const ContenedorCita = styled.div`
   display: flex;
@@ -13,7 +13,7 @@ export const ContenedorCita = styled.div`
   box-shadow: 4px 4px 5px darkgrey;
   border-radius: 10px;
   background-color: whitesmoke;
-`;
+`
 
 export const TextoCita = styled.p`
   font-size: 2rem;
@@ -22,7 +22,7 @@ export const TextoCita = styled.p`
   margin: 1rem auto;
   padding: 1rem;
   min-height: 5rem;
-`;
+`
 
 export const AutorCita = styled.p`
   font-size: 1.7rem;
@@ -31,7 +31,7 @@ export const AutorCita = styled.p`
   margin: 1rem auto;
   padding: 0;
   min-height: 3rem;
-`;
+`
 
 export const Input = styled.input`
   width: 60%;
@@ -42,7 +42,7 @@ export const Input = styled.input`
   font-size: 1.5rem;
   margin: 1rem auto;
   font-family: "Homer Simpson Revised", sans-serif;
-`;
+`
 
 export const Boton = styled.button<{ secondary?: boolean }>`
   width: 45%;
@@ -76,4 +76,4 @@ export const Boton = styled.button<{ secondary?: boolean }>`
             -2px -2px 0 #000000, 2px 0px 0 #000000, 0px 2px 0 #000000,
             -2px 0px 0 #000000, 0px -2px 0 #000000;
         `}
-`;
+`

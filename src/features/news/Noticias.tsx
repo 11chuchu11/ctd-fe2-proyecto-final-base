@@ -1,6 +1,6 @@
-import { useEffect, useState } from "react";
-import { SuscribeImage, CloseButton as Close } from "../../assets";
-import { obtenerNoticias } from "./fakeRest";
+import { useEffect, useState } from 'react'
+import { SuscribeImage, CloseButton as Close } from '../../assets'
+import { obtenerNoticias } from './fakeRest'
 import {
   CloseButton,
   TarjetaModal,
@@ -19,7 +19,7 @@ import {
   BotonLectura,
   BotonSuscribir,
   CotenedorTexto,
-} from "./styled";
+} from './styled'
 
 export interface INoticiasNormalizadas {
   id: number;
@@ -32,25 +32,25 @@ export interface INoticiasNormalizadas {
 }
 
 const Noticias = () => {
-  const [noticias, setNoticias] = useState<INoticiasNormalizadas[]>([]);
-  const [modal, setModal] = useState<INoticiasNormalizadas | null>(null);
+  const [noticias, setNoticias] = useState<INoticiasNormalizadas[]>([])
+  const [modal, setModal] = useState<INoticiasNormalizadas | null>(null)
 
   useEffect(() => {
     const obtenerInformacion = async () => {
-      const respuesta = await obtenerNoticias();
+      const respuesta = await obtenerNoticias()
 
       const data = respuesta.map((n) => {
         const titulo = n.titulo
-          .split(" ")
+          .split(' ')
           .map((str) => {
-            return str.charAt(0).toUpperCase() + str.slice(1);
+            return str.charAt(0).toUpperCase() + str.slice(1)
           })
-          .join(" ");
+          .join(' ')
 
-        const ahora = new Date();
+        const ahora = new Date()
         const minutosTranscurridos = Math.floor(
           (ahora.getTime() - n.fecha.getTime()) / 60000
-        );
+        )
 
         return {
           id: n.id,
@@ -60,14 +60,14 @@ const Noticias = () => {
           esPremium: n.esPremium,
           imagen: n.imagen,
           descripcionCorta: n.descripcion.substring(0, 100),
-        };
-      });
+        }
+      })
 
-      setNoticias(data);
-    };
+      setNoticias(data)
+    }
 
-    obtenerInformacion();
-  }, []);
+    obtenerInformacion()
+  }, [])
 
   return (
     <ContenedorNoticias>
@@ -101,8 +101,8 @@ const Noticias = () => {
                   <BotonSuscribir
                     onClick={() =>
                       setTimeout(() => {
-                        alert("Suscripto!");
-                        setModal(null);
+                        alert('Suscripto!')
+                        setModal(null)
                       }, 1000)
                     }
                   >
@@ -128,7 +128,7 @@ const Noticias = () => {
         ) : null}
       </ListaNoticias>
     </ContenedorNoticias>
-  );
-};
+  )
+}
 
-export default Noticias;
+export default Noticias

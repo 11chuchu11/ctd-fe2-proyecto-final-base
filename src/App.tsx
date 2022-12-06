@@ -1,8 +1,8 @@
-import React from "react";
-import Cita from "./features/quote/Cita";
-import "./App.css";
-import Bio from "./features/bio/Bio";
-import Noticias from "./features/news/Noticias";
+import React from 'react'
+import Cita from './features/quote/Cita'
+import './App.css'
+import Bio from './features/bio/Bio'
+import Noticias from './features/news/Noticias'
 
 function App() {
   return (
@@ -22,7 +22,7 @@ function App() {
         <Noticias />
       </section>
     </div>
-  );
+  )
 }
 
-export default App;
+export default App

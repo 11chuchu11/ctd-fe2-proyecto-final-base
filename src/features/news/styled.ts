@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled from 'styled-components'
 
 export const ContenedorNoticias = styled.div`
   display: flex;
@@ -8,7 +8,7 @@ export const ContenedorNoticias = styled.div`
   width: 100%;
   height: 100%;
   padding: 0 1rem;
-`;
+`
 
 export const TituloNoticias = styled.h2`
   font-size: 3.5rem;
@@ -21,7 +21,7 @@ export const TituloNoticias = styled.h2`
     -2px 0px 0 #000000, 0px -2px 0 #000000;
 
   letter-spacing: 0.1rem;
-`;
+`
 
 export const ListaNoticias = styled.div`
   display: flex;
@@ -31,7 +31,7 @@ export const ListaNoticias = styled.div`
   width: 80%;
   height: 100%;
   padding: 0;
-`;
+`
 
 export const TarjetaNoticia = styled.div`
   display: flex;
@@ -52,7 +52,7 @@ export const TarjetaNoticia = styled.div`
     box-shadow: 2px 2px 20px rgba(0, 0, 0, 0.3);
     cursor: pointer;
   }
-`;
+`
 
 export const ImagenTarjetaNoticia = styled.img`
   width: 100%;
@@ -60,7 +60,7 @@ export const ImagenTarjetaNoticia = styled.img`
   object-fit: cover;
   border-top-left-radius: 10px;
   border-top-right-radius: 10px;
-`;
+`
 
 export const TituloTarjetaNoticia = styled.h3`
   font-size: 1.3rem;
@@ -68,7 +68,7 @@ export const TituloTarjetaNoticia = styled.h3`
   margin: 1rem auto;
   padding: 0 1rem;
   height: 3.5rem;
-`;
+`
 
 export const DescripcionTarjetaNoticia = styled.p`
   width: 100%;
@@ -76,14 +76,14 @@ export const DescripcionTarjetaNoticia = styled.p`
   font-size: 1.2rem;
   margin: 0;
   padding: 0;
-`;
+`
 
 export const FechaTarjetaNoticia = styled.p`
   font-size: 0.9rem;
   margin: 0.3rem auto;
   width: 90%;
   text-align: right;
-`;
+`
 
 export const BotonLectura = styled.button`
   width: 100%;
@@ -104,7 +104,7 @@ export const BotonLectura = styled.button`
 
   position: absolute;
   bottom: 0px;
-`;
+`
 
 export const ContenedorModal = styled.div`
   display: flex;
@@ -120,7 +120,7 @@ export const ContenedorModal = styled.div`
   transform: translate(-50%, -50%);
   z-index: 10;
   background-color: rgba(0, 0, 0, 0.5);
-`;
+`
 
 export const TarjetaModal = styled.div`
   display: flex;
@@ -136,7 +136,7 @@ export const TarjetaModal = styled.div`
   box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
   transition: all 0.3s ease;
   position: relative;
-`;
+`
 
 export const CloseButton = styled.button`
   width: 20px;
@@ -155,12 +155,12 @@ export const CloseButton = styled.button`
   &:hover {
     cursor: pointer;
   }
-`;
+`
 
 export const ImagenModal = styled.img`
   width: 60%;
   height: 100%;
-`;
+`
 
 export const CotenedorTexto = styled.div`
   display: flex;
@@ -171,7 +171,7 @@ export const CotenedorTexto = styled.div`
   height: 100%;
   padding: 1rem;
   margin-top: 5rem;
-`;
+`
 
 export const TituloModal = styled.h3`
   font-size: 1.5rem;
@@ -180,7 +180,7 @@ export const TituloModal = styled.h3`
   padding: 0;
   text-align: left;
   width: 100%;
-`;
+`
 
 export const DescripcionModal = styled.p`
   width: 100%;
@@ -191,7 +191,7 @@ export const DescripcionModal = styled.p`
   padding: 1rem 0;
   text-align: left;
   overflow-y: auto;
-`;
+`
 
 export const BotonSuscribir = styled.button`
   width: 20%;
@@ -206,4 +206,4 @@ export const BotonSuscribir = styled.button`
   margin-top: 1rem;
   font-weight: bold;
   font-family: "Homer Simpson Revised", sans-serif;
-`;
+`
