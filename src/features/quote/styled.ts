@@ -61,15 +61,15 @@ export const Boton = styled.button<{ secondary?: boolean }>`
   }
 
   ${(props) =>
-    props.secondary
-      ? css`
+        props.secondary
+            ? css`
           background-color: #d1b07d;
           color: whitesmoke;
           text-shadow: 2px 2px 0 #000000, 2px -2px 0 #000000, -2px 2px 0 #000000,
             -2px -2px 0 #000000, 2px 0px 0 #000000, 0px 2px 0 #000000,
             -2px 0px 0 #000000, 0px -2px 0 #000000;
         `
-      : css`
+            : css`
           background-color: #fdd835;
           color: whitesmoke;
           text-shadow: 2px 2px 0 #000000, 2px -2px 0 #000000, -2px 2px 0 #000000,

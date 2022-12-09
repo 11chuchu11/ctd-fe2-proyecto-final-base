@@ -10,51 +10,51 @@ export interface EstadoCita {
 }
 
 const initialState: EstadoCita = {
-  data: null,
-  estado: ESTADO_FETCH.INACTIVO,
+    data: null,
+    estado: ESTADO_FETCH.INACTIVO,
 }
 
 export const obtenerCitaAsync = createAsyncThunk(
-  'cita/obtenerCita',
-  async (personaje: string) => {
-    try {
-      const cita = await obtenerCita(personaje)
+    'cita/obtenerCita',
+    async (personaje: string) => {
+        try {
+            const cita = await obtenerCita(personaje)
 
-      return cita
-    } catch (err) {
-      throw err
+            return cita
+        } catch (err) {
+            throw err
+        }
     }
-  }
 )
 
 export const citaSlice = createSlice({
-  name: 'citas',
-  initialState,
-  reducers: {
-    limpiar: () => initialState,
-  },
+    name: 'citas',
+    initialState,
+    reducers: {
+        limpiar: () => initialState,
+    },
 
-  extraReducers: (builder) => {
-    builder
-      .addCase(obtenerCitaAsync.pending, (state) => {
-        state.estado = ESTADO_FETCH.CARGANDO
-      })
-      .addCase(obtenerCitaAsync.fulfilled, (state, action) => {
-        state.estado = ESTADO_FETCH.INACTIVO
-        state.data = action.payload
-      })
-      .addCase(obtenerCitaAsync.rejected, (state) => {
-        state.estado = ESTADO_FETCH.ERROR
-      })
-  },
+    extraReducers: (builder) => {
+        builder
+            .addCase(obtenerCitaAsync.pending, (state) => {
+                state.estado = ESTADO_FETCH.CARGANDO
+            })
+            .addCase(obtenerCitaAsync.fulfilled, (state, action) => {
+                state.estado = ESTADO_FETCH.INACTIVO
+                state.data = action.payload
+            })
+            .addCase(obtenerCitaAsync.rejected, (state) => {
+                state.estado = ESTADO_FETCH.ERROR
+            })
+    },
 })
 
 export const { limpiar } = citaSlice.actions
 
 export const obtenerCitaDeLaAPI =
   (personaje: string) => (dispatch: AppDispatch) => {
-    dispatch(limpiar())
-    dispatch(obtenerCitaAsync(personaje))
+      dispatch(limpiar())
+      dispatch(obtenerCitaAsync(personaje))
   }
 
 export const obtenerCitaDelEstado = (state: RootState) => state.cita.data

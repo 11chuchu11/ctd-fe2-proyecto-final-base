@@ -2,9 +2,9 @@ import { configureStore, ThunkAction, Action } from '@reduxjs/toolkit'
 import citaReducer from '../features/quote/citaSlice'
 
 export const store = configureStore({
-  reducer: {
-    cita: citaReducer,
-  },
+    reducer: {
+        cita: citaReducer,
+    },
 })
 
 export type AppDispatch = typeof store.dispatch;

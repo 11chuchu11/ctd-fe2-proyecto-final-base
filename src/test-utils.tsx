@@ -8,29 +8,29 @@ import { RootState } from './app/store'
 
 // Creamos el custom render
 const customRender = (
-  ui: React.ReactElement,
-  {
-    preloadedState,
-    store = configureStore({
-      reducer: {
-        cita: citaReducer,
-      },
-      preloadedState,
-    }),
-    ...renderOptions
-  }: {
+    ui: React.ReactElement,
+    {
+        preloadedState,
+        store = configureStore({
+            reducer: {
+                cita: citaReducer,
+            },
+            preloadedState,
+        }),
+        ...renderOptions
+    }: {
     preloadedState?: RootState;
     store?: ReturnType<typeof configureStore>;
   } = {}
 ) => {
-  const Wrapper: React.FC<{
+    const Wrapper: React.FC<{
     children: React.ReactNode;
   }> = ({ children }) => <Provider store={store}>{children}</Provider>
 
-  render(ui, {
-    wrapper: Wrapper,
-    ...renderOptions,
-  })
+    render(ui, {
+        wrapper: Wrapper,
+        ...renderOptions,
+    })
 }
 
 // re-exportamos todo
