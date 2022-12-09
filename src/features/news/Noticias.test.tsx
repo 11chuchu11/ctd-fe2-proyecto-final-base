@@ -1,8 +1,8 @@
 
 import userEvent from '@testing-library/user-event'
-import sleep from '../helpers/sleep'
-import { act, render, screen } from '../test-utils'
-import Noticias from '../features/news/Noticias'
+import sleep from '../../helpers/sleep'
+import { act, render, screen } from '../../test-utils'
+import Noticias from './Noticias'
 
 describe('Notice', () => {
     test('Renders cards', async () => {

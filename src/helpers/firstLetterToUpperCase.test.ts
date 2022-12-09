@@ -1,4 +1,4 @@
-import firstLetterToUpperCase from '../helpers/firstLetterToUpperCase'
+import firstLetterToUpperCase from './firstLetterToUpperCase'
 
 describe('testing fn firstLetterToUpperCase',() => {
     test('returns a word capitalized',() => {

@@ -1,7 +1,7 @@
-import Cita from '../features/quote/Cita'
-import { act, render, screen } from '../test-utils'
+import Cita from './Cita'
+import { act, render, screen } from '../../test-utils'
 import userEvent from '@testing-library/user-event'
-import sleep from '../helpers/sleep'
+import sleep from '../../helpers/sleep'
 
 
 
